@@ -1,0 +1,11 @@
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Debug\LastEpochBuildPlanner.exe
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Debug\LastEpochBuildPlanner.pdb
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.csproj.AssemblyReference.cache
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.Main.resources
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.Properties.Resources.resources
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.csproj.GenerateResource.cache
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.csproj.CoreCompileInputs.cache
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.exe
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.pdb
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Debug\Data\classes.xml
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.Passives.resources

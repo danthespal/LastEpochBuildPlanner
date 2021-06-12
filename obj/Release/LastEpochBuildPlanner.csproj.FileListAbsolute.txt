@@ -1,0 +1,11 @@
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Data\classes.xml
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\LastEpochBuildPlanner.exe
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\LastEpochBuildPlanner.pdb
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.csproj.AssemblyReference.cache
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.Main.resources
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.Passives.resources
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.Properties.Resources.resources
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.csproj.GenerateResource.cache
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.csproj.CoreCompileInputs.cache
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.exe
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.pdb

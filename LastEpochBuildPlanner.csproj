@@ -153,6 +153,8 @@
     <Content Include="Data\classes.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\_ruined_welryn.png" />
+    <None Include="Resources\bg-gray-textured.png" />
     <None Include="Resources\default_class.png" />
     <None Include="Resources\voidRes.png" />
     <None Include="Resources\poisonRes.png" />

@@ -18,10 +18,11 @@ namespace LastEpochBuildPlanner
         public Main()
         {
             InitializeComponent();
+            LoadClass();
             UpdateClass();
         }
 
-        private void LoadXML()
+        private void LoadClass()
         {
             // selected item is trimed of '-' and ' ' (space)
             string selected = classList.Text.Trim(new char[] { '-', ' ' });
@@ -181,20 +182,23 @@ namespace LastEpochBuildPlanner
         private void passivesBtn_Click(object sender, EventArgs e)
         {
             // new form, passive points panel
-            var passiveForm = new Passives();
+            Passives passiveForm = new Passives();
             passiveForm.Show();
         }
 
         // update values based on selected class
         private void classList_TextChanged(object sender, EventArgs e)
         {
-            LoadXML();
+            LoadClass();
             UpdateClass();
         }
 
         private void lvlValue_ValueChanged(object sender, EventArgs e)
         {
-            UpdateClass();
+            if (classList.SelectedItem == null || string.IsNullOrEmpty(classList.SelectedItem.ToString()))
+            {
+                lvlValue.Value = 1;
+            }
 
             // strength
 
@@ -209,8 +213,8 @@ namespace LastEpochBuildPlanner
             // health
             if (classList.Text == "Druid")
             {
-                healthBLvl = Math.Floor((9.6 * (int)lvlValue.Value) - 9.6 + health);
-                healthValue.Text = Convert.ToString(healthBLvl);
+                healthBLvl = (9.6 * (int)lvlValue.Value) - 9.6 + health;
+                healthValue.Text = Convert.ToString(Math.Floor(healthBLvl));
             } else
             {
                 healthBLvl = (8 * (int)lvlValue.Value) - 8 + health;
@@ -220,17 +224,17 @@ namespace LastEpochBuildPlanner
             // mana
             if (classList.Text == "Druid")
             {
-                manaBLevel = Math.Floor(0.6f * (int)lvlValue.Value) + mana;
-                manaValue.Text = Convert.ToString(manaBLevel);
+                manaBLevel = (0.6f * (int)lvlValue.Value) - 0.6f + mana;
+                manaValue.Text = Convert.ToString(Math.Floor(manaBLevel));
             } else
             {
-                manaBLevel = Math.Floor(0.5f * (int)lvlValue.Value) + mana;
-                manaValue.Text = Convert.ToString(manaBLevel);
+                manaBLevel = (0.5f * (int)lvlValue.Value) - 0.5f + mana;
+                manaValue.Text = Convert.ToString(Math.Floor(manaBLevel));
             }
 
             // health regen
-            healthRegBLvl = Math.Floor(healthReg + (0.14 * (int)lvlValue.Value));
-            healthRegenValue.Text = Convert.ToString(healthRegBLvl);
+            healthRegBLvl = (0.14 * (int)lvlValue.Value) + healthReg;
+            healthRegenValue.Text = Convert.ToString(Math.Floor(healthRegBLvl));
 
             // mana regen
 

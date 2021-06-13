@@ -63,6 +63,16 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _ruined_welryn {
+            get {
+                object obj = ResourceManager.GetObject("_ruined_welryn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Acolyte {
             get {
                 object obj = ResourceManager.GetObject("Acolyte", resourceCulture);
@@ -76,6 +86,16 @@ namespace LastEpochBuildPlanner.Properties {
         internal static System.Drawing.Bitmap Beastmaster {
             get {
                 object obj = ResourceManager.GetObject("Beastmaster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg_gray_textured {
+            get {
+                object obj = ResourceManager.GetObject("bg_gray_textured", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,6 +29,9 @@ namespace LastEpochBuildPlanner
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.skillsBtn = new System.Windows.Forms.Button();
+            this.passivesBtn = new System.Windows.Forms.Button();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.wardRetValue = new System.Windows.Forms.Label();
             this.dodgeValue = new System.Windows.Forms.Label();
@@ -93,9 +96,6 @@ namespace LastEpochBuildPlanner
             this.dexStr = new System.Windows.Forms.Label();
             this.strStr = new System.Windows.Forms.Label();
             this.selectClass = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.skillsBtn = new System.Windows.Forms.Button();
-            this.passivesBtn = new System.Windows.Forms.Button();
             this.panelInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fireResBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lightResBox)).BeginInit();
@@ -108,9 +108,41 @@ namespace LastEpochBuildPlanner
             ((System.ComponentModel.ISupportInitialize)(this.classPicBox)).BeginInit();
             this.SuspendLayout();
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Location = new System.Drawing.Point(557, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(694, 483);
+            this.panel1.TabIndex = 29;
+            // 
+            // skillsBtn
+            // 
+            this.skillsBtn.Enabled = false;
+            this.skillsBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skillsBtn.Location = new System.Drawing.Point(12, 501);
+            this.skillsBtn.Name = "skillsBtn";
+            this.skillsBtn.Size = new System.Drawing.Size(104, 32);
+            this.skillsBtn.TabIndex = 30;
+            this.skillsBtn.Text = "#SKILLS";
+            this.skillsBtn.UseVisualStyleBackColor = true;
+            // 
+            // passivesBtn
+            // 
+            this.passivesBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passivesBtn.Location = new System.Drawing.Point(125, 501);
+            this.passivesBtn.Name = "passivesBtn";
+            this.passivesBtn.Size = new System.Drawing.Size(104, 32);
+            this.passivesBtn.TabIndex = 31;
+            this.passivesBtn.Text = "PASSIVES";
+            this.passivesBtn.UseVisualStyleBackColor = true;
+            this.passivesBtn.Click += new System.EventHandler(this.passivesBtn_Click);
+            // 
             // panelInfo
             // 
             this.panelInfo.BackColor = System.Drawing.Color.DarkGray;
+            this.panelInfo.BackgroundImage = global::LastEpochBuildPlanner.Properties.Resources.bg_gray_textured;
+            this.panelInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelInfo.Controls.Add(this.wardRetValue);
             this.panelInfo.Controls.Add(this.dodgeValue);
             this.panelInfo.Controls.Add(this.blockEffValue);
@@ -181,10 +213,11 @@ namespace LastEpochBuildPlanner
             // 
             // wardRetValue
             // 
+            this.wardRetValue.BackColor = System.Drawing.Color.Transparent;
             this.wardRetValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wardRetValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.wardRetValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.wardRetValue.Location = new System.Drawing.Point(374, 450);
+            this.wardRetValue.Location = new System.Drawing.Point(371, 450);
             this.wardRetValue.Name = "wardRetValue";
             this.wardRetValue.Size = new System.Drawing.Size(141, 23);
             this.wardRetValue.TabIndex = 70;
@@ -193,10 +226,11 @@ namespace LastEpochBuildPlanner
             // 
             // dodgeValue
             // 
+            this.dodgeValue.BackColor = System.Drawing.Color.Transparent;
             this.dodgeValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dodgeValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.dodgeValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.dodgeValue.Location = new System.Drawing.Point(239, 450);
+            this.dodgeValue.Location = new System.Drawing.Point(237, 450);
             this.dodgeValue.Name = "dodgeValue";
             this.dodgeValue.Size = new System.Drawing.Size(57, 23);
             this.dodgeValue.TabIndex = 69;
@@ -205,10 +239,11 @@ namespace LastEpochBuildPlanner
             // 
             // blockEffValue
             // 
+            this.blockEffValue.BackColor = System.Drawing.Color.Transparent;
             this.blockEffValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blockEffValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.blockEffValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.blockEffValue.Location = new System.Drawing.Point(19, 450);
+            this.blockEffValue.Location = new System.Drawing.Point(20, 450);
             this.blockEffValue.Name = "blockEffValue";
             this.blockEffValue.Size = new System.Drawing.Size(161, 23);
             this.blockEffValue.TabIndex = 68;
@@ -218,7 +253,9 @@ namespace LastEpochBuildPlanner
             // wardRetStr
             // 
             this.wardRetStr.AutoSize = true;
+            this.wardRetStr.BackColor = System.Drawing.Color.Transparent;
             this.wardRetStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wardRetStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.wardRetStr.Location = new System.Drawing.Point(368, 431);
             this.wardRetStr.Name = "wardRetStr";
             this.wardRetStr.Size = new System.Drawing.Size(147, 19);
@@ -228,7 +265,9 @@ namespace LastEpochBuildPlanner
             // dodgeStr
             // 
             this.dodgeStr.AutoSize = true;
+            this.dodgeStr.BackColor = System.Drawing.Color.Transparent;
             this.dodgeStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dodgeStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.dodgeStr.Location = new System.Drawing.Point(235, 431);
             this.dodgeStr.Name = "dodgeStr";
             this.dodgeStr.Size = new System.Drawing.Size(61, 19);
@@ -238,7 +277,9 @@ namespace LastEpochBuildPlanner
             // blockEffStr
             // 
             this.blockEffStr.AutoSize = true;
+            this.blockEffStr.BackColor = System.Drawing.Color.Transparent;
             this.blockEffStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blockEffStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.blockEffStr.Location = new System.Drawing.Point(15, 431);
             this.blockEffStr.Name = "blockEffStr";
             this.blockEffStr.Size = new System.Drawing.Size(170, 19);
@@ -247,10 +288,11 @@ namespace LastEpochBuildPlanner
             // 
             // stunAvoidValue
             // 
+            this.stunAvoidValue.BackColor = System.Drawing.Color.Transparent;
             this.stunAvoidValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stunAvoidValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.stunAvoidValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.stunAvoidValue.Location = new System.Drawing.Point(382, 404);
+            this.stunAvoidValue.Location = new System.Drawing.Point(380, 404);
             this.stunAvoidValue.Name = "stunAvoidValue";
             this.stunAvoidValue.Size = new System.Drawing.Size(133, 23);
             this.stunAvoidValue.TabIndex = 64;
@@ -259,10 +301,11 @@ namespace LastEpochBuildPlanner
             // 
             // armourValue
             // 
+            this.armourValue.BackColor = System.Drawing.Color.Transparent;
             this.armourValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.armourValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.armourValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.armourValue.Location = new System.Drawing.Point(231, 404);
+            this.armourValue.Location = new System.Drawing.Point(232, 404);
             this.armourValue.Name = "armourValue";
             this.armourValue.Size = new System.Drawing.Size(67, 23);
             this.armourValue.TabIndex = 63;
@@ -271,10 +314,11 @@ namespace LastEpochBuildPlanner
             // 
             // blockChanceValue
             // 
+            this.blockChanceValue.BackColor = System.Drawing.Color.Transparent;
             this.blockChanceValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blockChanceValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.blockChanceValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.blockChanceValue.Location = new System.Drawing.Point(19, 404);
+            this.blockChanceValue.Location = new System.Drawing.Point(17, 404);
             this.blockChanceValue.Name = "blockChanceValue";
             this.blockChanceValue.Size = new System.Drawing.Size(119, 23);
             this.blockChanceValue.TabIndex = 62;
@@ -284,7 +328,9 @@ namespace LastEpochBuildPlanner
             // stunAvoidStr
             // 
             this.stunAvoidStr.AutoSize = true;
+            this.stunAvoidStr.BackColor = System.Drawing.Color.Transparent;
             this.stunAvoidStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stunAvoidStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.stunAvoidStr.Location = new System.Drawing.Point(378, 385);
             this.stunAvoidStr.Name = "stunAvoidStr";
             this.stunAvoidStr.Size = new System.Drawing.Size(137, 19);
@@ -294,7 +340,9 @@ namespace LastEpochBuildPlanner
             // armourStr
             // 
             this.armourStr.AutoSize = true;
+            this.armourStr.BackColor = System.Drawing.Color.Transparent;
             this.armourStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.armourStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.armourStr.Location = new System.Drawing.Point(227, 385);
             this.armourStr.Name = "armourStr";
             this.armourStr.Size = new System.Drawing.Size(77, 19);
@@ -304,7 +352,9 @@ namespace LastEpochBuildPlanner
             // blockChanceStr
             // 
             this.blockChanceStr.AutoSize = true;
+            this.blockChanceStr.BackColor = System.Drawing.Color.Transparent;
             this.blockChanceStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blockChanceStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.blockChanceStr.Location = new System.Drawing.Point(15, 385);
             this.blockChanceStr.Name = "blockChanceStr";
             this.blockChanceStr.Size = new System.Drawing.Size(123, 19);
@@ -314,7 +364,9 @@ namespace LastEpochBuildPlanner
             // addDefStr
             // 
             this.addDefStr.AutoSize = true;
+            this.addDefStr.BackColor = System.Drawing.Color.Transparent;
             this.addDefStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addDefStr.ForeColor = System.Drawing.Color.White;
             this.addDefStr.Location = new System.Drawing.Point(174, 357);
             this.addDefStr.Name = "addDefStr";
             this.addDefStr.Size = new System.Drawing.Size(182, 19);
@@ -332,6 +384,7 @@ namespace LastEpochBuildPlanner
             // 
             // voidValue
             // 
+            this.voidValue.BackColor = System.Drawing.Color.Transparent;
             this.voidValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voidValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.voidValue.Location = new System.Drawing.Point(460, 321);
@@ -342,6 +395,7 @@ namespace LastEpochBuildPlanner
             // 
             // necroValue
             // 
+            this.necroValue.BackColor = System.Drawing.Color.Transparent;
             this.necroValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.necroValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.necroValue.Location = new System.Drawing.Point(390, 321);
@@ -352,6 +406,7 @@ namespace LastEpochBuildPlanner
             // 
             // poisonValue
             // 
+            this.poisonValue.BackColor = System.Drawing.Color.Transparent;
             this.poisonValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.poisonValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.poisonValue.Location = new System.Drawing.Point(320, 321);
@@ -362,6 +417,7 @@ namespace LastEpochBuildPlanner
             // 
             // phyValue
             // 
+            this.phyValue.BackColor = System.Drawing.Color.Transparent;
             this.phyValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phyValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.phyValue.Location = new System.Drawing.Point(250, 321);
@@ -372,6 +428,7 @@ namespace LastEpochBuildPlanner
             // 
             // coldValue
             // 
+            this.coldValue.BackColor = System.Drawing.Color.Transparent;
             this.coldValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coldValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.coldValue.Location = new System.Drawing.Point(180, 321);
@@ -382,6 +439,7 @@ namespace LastEpochBuildPlanner
             // 
             // lightValue
             // 
+            this.lightValue.BackColor = System.Drawing.Color.Transparent;
             this.lightValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lightValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lightValue.Location = new System.Drawing.Point(110, 321);
@@ -392,6 +450,7 @@ namespace LastEpochBuildPlanner
             // 
             // fireValue
             // 
+            this.fireValue.BackColor = System.Drawing.Color.Transparent;
             this.fireValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fireValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.fireValue.Location = new System.Drawing.Point(40, 321);
@@ -403,6 +462,7 @@ namespace LastEpochBuildPlanner
             // fireStr
             // 
             this.fireStr.AutoSize = true;
+            this.fireStr.BackColor = System.Drawing.Color.Transparent;
             this.fireStr.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fireStr.ForeColor = System.Drawing.Color.DarkRed;
             this.fireStr.Location = new System.Drawing.Point(37, 301);
@@ -414,6 +474,7 @@ namespace LastEpochBuildPlanner
             // lightStr
             // 
             this.lightStr.AutoSize = true;
+            this.lightStr.BackColor = System.Drawing.Color.Transparent;
             this.lightStr.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lightStr.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lightStr.Location = new System.Drawing.Point(88, 301);
@@ -425,6 +486,7 @@ namespace LastEpochBuildPlanner
             // coldStr
             // 
             this.coldStr.AutoSize = true;
+            this.coldStr.BackColor = System.Drawing.Color.Transparent;
             this.coldStr.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coldStr.ForeColor = System.Drawing.Color.SteelBlue;
             this.coldStr.Location = new System.Drawing.Point(176, 301);
@@ -435,6 +497,7 @@ namespace LastEpochBuildPlanner
             // 
             // fireResBox
             // 
+            this.fireResBox.BackColor = System.Drawing.Color.Transparent;
             this.fireResBox.Image = global::LastEpochBuildPlanner.Properties.Resources.fireRes;
             this.fireResBox.Location = new System.Drawing.Point(40, 266);
             this.fireResBox.Name = "fireResBox";
@@ -445,6 +508,7 @@ namespace LastEpochBuildPlanner
             // 
             // lightResBox
             // 
+            this.lightResBox.BackColor = System.Drawing.Color.Transparent;
             this.lightResBox.Image = global::LastEpochBuildPlanner.Properties.Resources.lightRes;
             this.lightResBox.Location = new System.Drawing.Point(110, 266);
             this.lightResBox.Name = "lightResBox";
@@ -455,6 +519,7 @@ namespace LastEpochBuildPlanner
             // 
             // coldResBox
             // 
+            this.coldResBox.BackColor = System.Drawing.Color.Transparent;
             this.coldResBox.Image = global::LastEpochBuildPlanner.Properties.Resources.coldRes;
             this.coldResBox.Location = new System.Drawing.Point(180, 266);
             this.coldResBox.Name = "coldResBox";
@@ -466,6 +531,7 @@ namespace LastEpochBuildPlanner
             // voidStr
             // 
             this.voidStr.AutoSize = true;
+            this.voidStr.BackColor = System.Drawing.Color.Transparent;
             this.voidStr.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voidStr.ForeColor = System.Drawing.Color.DarkMagenta;
             this.voidStr.Location = new System.Drawing.Point(456, 301);
@@ -477,6 +543,7 @@ namespace LastEpochBuildPlanner
             // necroStr
             // 
             this.necroStr.AutoSize = true;
+            this.necroStr.BackColor = System.Drawing.Color.Transparent;
             this.necroStr.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.necroStr.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.necroStr.Location = new System.Drawing.Point(371, 301);
@@ -488,6 +555,7 @@ namespace LastEpochBuildPlanner
             // poisonStr
             // 
             this.poisonStr.AutoSize = true;
+            this.poisonStr.BackColor = System.Drawing.Color.Transparent;
             this.poisonStr.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.poisonStr.ForeColor = System.Drawing.Color.DarkGreen;
             this.poisonStr.Location = new System.Drawing.Point(308, 301);
@@ -499,6 +567,7 @@ namespace LastEpochBuildPlanner
             // phyStr
             // 
             this.phyStr.AutoSize = true;
+            this.phyStr.BackColor = System.Drawing.Color.Transparent;
             this.phyStr.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phyStr.ForeColor = System.Drawing.Color.Sienna;
             this.phyStr.Location = new System.Drawing.Point(232, 301);
@@ -509,6 +578,7 @@ namespace LastEpochBuildPlanner
             // 
             // voidResBox
             // 
+            this.voidResBox.BackColor = System.Drawing.Color.Transparent;
             this.voidResBox.Image = global::LastEpochBuildPlanner.Properties.Resources.voidRes;
             this.voidResBox.Location = new System.Drawing.Point(460, 266);
             this.voidResBox.Name = "voidResBox";
@@ -519,6 +589,7 @@ namespace LastEpochBuildPlanner
             // 
             // necroResBox
             // 
+            this.necroResBox.BackColor = System.Drawing.Color.Transparent;
             this.necroResBox.Image = global::LastEpochBuildPlanner.Properties.Resources.necroRes;
             this.necroResBox.Location = new System.Drawing.Point(390, 266);
             this.necroResBox.Name = "necroResBox";
@@ -529,6 +600,7 @@ namespace LastEpochBuildPlanner
             // 
             // poisonResBox
             // 
+            this.poisonResBox.BackColor = System.Drawing.Color.Transparent;
             this.poisonResBox.Image = global::LastEpochBuildPlanner.Properties.Resources.poisonRes;
             this.poisonResBox.Location = new System.Drawing.Point(320, 266);
             this.poisonResBox.Name = "poisonResBox";
@@ -539,6 +611,7 @@ namespace LastEpochBuildPlanner
             // 
             // phyResBox
             // 
+            this.phyResBox.BackColor = System.Drawing.Color.Transparent;
             this.phyResBox.Image = global::LastEpochBuildPlanner.Properties.Resources.physicalRes;
             this.phyResBox.Location = new System.Drawing.Point(250, 266);
             this.phyResBox.Name = "phyResBox";
@@ -559,7 +632,9 @@ namespace LastEpochBuildPlanner
             // resistencesStr
             // 
             this.resistencesStr.AutoSize = true;
+            this.resistencesStr.BackColor = System.Drawing.Color.Transparent;
             this.resistencesStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resistencesStr.ForeColor = System.Drawing.Color.White;
             this.resistencesStr.Location = new System.Drawing.Point(212, 239);
             this.resistencesStr.Name = "resistencesStr";
             this.resistencesStr.Size = new System.Drawing.Size(107, 19);
@@ -568,14 +643,15 @@ namespace LastEpochBuildPlanner
             // 
             // lvlValue
             // 
-            this.lvlValue.Location = new System.Drawing.Point(112, 14);
+            this.lvlValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvlValue.Location = new System.Drawing.Point(112, 13);
             this.lvlValue.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.lvlValue.Name = "lvlValue";
-            this.lvlValue.Size = new System.Drawing.Size(68, 20);
+            this.lvlValue.Size = new System.Drawing.Size(68, 23);
             this.lvlValue.TabIndex = 27;
             this.lvlValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.lvlValue.Value = new decimal(new int[] {
@@ -588,7 +664,9 @@ namespace LastEpochBuildPlanner
             // lvlStr
             // 
             this.lvlStr.AutoSize = true;
+            this.lvlStr.BackColor = System.Drawing.Color.Transparent;
             this.lvlStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvlStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lvlStr.Location = new System.Drawing.Point(10, 15);
             this.lvlStr.Name = "lvlStr";
             this.lvlStr.Size = new System.Drawing.Size(55, 19);
@@ -597,10 +675,11 @@ namespace LastEpochBuildPlanner
             // 
             // movspeedValue
             // 
+            this.movspeedValue.BackColor = System.Drawing.Color.Transparent;
             this.movspeedValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movspeedValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.movspeedValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.movspeedValue.Location = new System.Drawing.Point(466, 154);
+            this.movspeedValue.Location = new System.Drawing.Point(466, 150);
             this.movspeedValue.Name = "movspeedValue";
             this.movspeedValue.Size = new System.Drawing.Size(56, 23);
             this.movspeedValue.TabIndex = 44;
@@ -609,6 +688,7 @@ namespace LastEpochBuildPlanner
             // 
             // manaRegenValue
             // 
+            this.manaRegenValue.BackColor = System.Drawing.Color.Transparent;
             this.manaRegenValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manaRegenValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.manaRegenValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -621,6 +701,7 @@ namespace LastEpochBuildPlanner
             // 
             // healthRegenValue
             // 
+            this.healthRegenValue.BackColor = System.Drawing.Color.Transparent;
             this.healthRegenValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.healthRegenValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.healthRegenValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -633,10 +714,11 @@ namespace LastEpochBuildPlanner
             // 
             // manaValue
             // 
+            this.manaValue.BackColor = System.Drawing.Color.Transparent;
             this.manaValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manaValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.manaValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.manaValue.Location = new System.Drawing.Point(466, 77);
+            this.manaValue.Location = new System.Drawing.Point(466, 75);
             this.manaValue.Name = "manaValue";
             this.manaValue.Size = new System.Drawing.Size(56, 23);
             this.manaValue.TabIndex = 41;
@@ -645,10 +727,11 @@ namespace LastEpochBuildPlanner
             // 
             // healthValue
             // 
+            this.healthValue.BackColor = System.Drawing.Color.Transparent;
             this.healthValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.healthValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.healthValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.healthValue.Location = new System.Drawing.Point(466, 54);
+            this.healthValue.Location = new System.Drawing.Point(466, 50);
             this.healthValue.Name = "healthValue";
             this.healthValue.Size = new System.Drawing.Size(56, 23);
             this.healthValue.TabIndex = 40;
@@ -657,10 +740,11 @@ namespace LastEpochBuildPlanner
             // 
             // vitValue
             // 
+            this.vitValue.BackColor = System.Drawing.Color.Transparent;
             this.vitValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vitValue.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.vitValue.ForeColor = System.Drawing.Color.White;
             this.vitValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.vitValue.Location = new System.Drawing.Point(124, 152);
+            this.vitValue.Location = new System.Drawing.Point(124, 150);
             this.vitValue.Name = "vitValue";
             this.vitValue.Size = new System.Drawing.Size(56, 23);
             this.vitValue.TabIndex = 54;
@@ -669,10 +753,11 @@ namespace LastEpochBuildPlanner
             // 
             // attValue
             // 
+            this.attValue.BackColor = System.Drawing.Color.Transparent;
             this.attValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attValue.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.attValue.ForeColor = System.Drawing.Color.White;
             this.attValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.attValue.Location = new System.Drawing.Point(124, 123);
+            this.attValue.Location = new System.Drawing.Point(124, 125);
             this.attValue.Name = "attValue";
             this.attValue.Size = new System.Drawing.Size(56, 23);
             this.attValue.TabIndex = 53;
@@ -681,10 +766,11 @@ namespace LastEpochBuildPlanner
             // 
             // intValue
             // 
+            this.intValue.BackColor = System.Drawing.Color.Transparent;
             this.intValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intValue.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.intValue.ForeColor = System.Drawing.Color.White;
             this.intValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.intValue.Location = new System.Drawing.Point(124, 98);
+            this.intValue.Location = new System.Drawing.Point(124, 100);
             this.intValue.Name = "intValue";
             this.intValue.Size = new System.Drawing.Size(56, 23);
             this.intValue.TabIndex = 52;
@@ -693,8 +779,9 @@ namespace LastEpochBuildPlanner
             // 
             // dexValue
             // 
+            this.dexValue.BackColor = System.Drawing.Color.Transparent;
             this.dexValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dexValue.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dexValue.ForeColor = System.Drawing.Color.White;
             this.dexValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.dexValue.Location = new System.Drawing.Point(124, 75);
             this.dexValue.Name = "dexValue";
@@ -705,10 +792,11 @@ namespace LastEpochBuildPlanner
             // 
             // strValue
             // 
+            this.strValue.BackColor = System.Drawing.Color.Transparent;
             this.strValue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.strValue.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.strValue.ForeColor = System.Drawing.Color.White;
             this.strValue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.strValue.Location = new System.Drawing.Point(124, 52);
+            this.strValue.Location = new System.Drawing.Point(124, 50);
             this.strValue.Name = "strValue";
             this.strValue.Size = new System.Drawing.Size(56, 23);
             this.strValue.TabIndex = 50;
@@ -717,6 +805,7 @@ namespace LastEpochBuildPlanner
             // 
             // classPicBox
             // 
+            this.classPicBox.BackColor = System.Drawing.Color.Transparent;
             this.classPicBox.Location = new System.Drawing.Point(190, 45);
             this.classPicBox.Name = "classPicBox";
             this.classPicBox.Size = new System.Drawing.Size(140, 140);
@@ -726,7 +815,9 @@ namespace LastEpochBuildPlanner
             // 
             // classStr
             // 
+            this.classStr.BackColor = System.Drawing.Color.Transparent;
             this.classStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.classStr.Location = new System.Drawing.Point(191, 189);
             this.classStr.Name = "classStr";
             this.classStr.Size = new System.Drawing.Size(141, 27);
@@ -735,6 +826,7 @@ namespace LastEpochBuildPlanner
             // 
             // classList
             // 
+            this.classList.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classList.FormattingEnabled = true;
             this.classList.Items.AddRange(new object[] {
             "- Primalist",
@@ -758,17 +850,19 @@ namespace LastEpochBuildPlanner
             "- Rogue",
             "Bladedancer",
             "Marksman"});
-            this.classList.Location = new System.Drawing.Point(394, 14);
+            this.classList.Location = new System.Drawing.Point(401, 13);
             this.classList.Name = "classList";
-            this.classList.Size = new System.Drawing.Size(121, 21);
+            this.classList.Size = new System.Drawing.Size(121, 23);
             this.classList.TabIndex = 12;
-            this.classList.Text = "Select a class";
+            this.classList.Text = "SELECT A CLASS";
             this.classList.TextChanged += new System.EventHandler(this.classList_TextChanged);
             // 
             // movspeedStr
             // 
             this.movspeedStr.AutoSize = true;
+            this.movspeedStr.BackColor = System.Drawing.Color.Transparent;
             this.movspeedStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movspeedStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.movspeedStr.Location = new System.Drawing.Point(338, 152);
             this.movspeedStr.Name = "movspeedStr";
             this.movspeedStr.Size = new System.Drawing.Size(97, 19);
@@ -778,7 +872,9 @@ namespace LastEpochBuildPlanner
             // manaregStr
             // 
             this.manaregStr.AutoSize = true;
+            this.manaregStr.BackColor = System.Drawing.Color.Transparent;
             this.manaregStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manaregStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.manaregStr.Location = new System.Drawing.Point(338, 127);
             this.manaregStr.Name = "manaregStr";
             this.manaregStr.Size = new System.Drawing.Size(112, 19);
@@ -788,7 +884,9 @@ namespace LastEpochBuildPlanner
             // hltregStr
             // 
             this.hltregStr.AutoSize = true;
+            this.hltregStr.BackColor = System.Drawing.Color.Transparent;
             this.hltregStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hltregStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.hltregStr.Location = new System.Drawing.Point(338, 102);
             this.hltregStr.Name = "hltregStr";
             this.hltregStr.Size = new System.Drawing.Size(127, 19);
@@ -798,7 +896,9 @@ namespace LastEpochBuildPlanner
             // manaStr
             // 
             this.manaStr.AutoSize = true;
+            this.manaStr.BackColor = System.Drawing.Color.Transparent;
             this.manaStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manaStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.manaStr.Location = new System.Drawing.Point(338, 77);
             this.manaStr.Name = "manaStr";
             this.manaStr.Size = new System.Drawing.Size(54, 19);
@@ -808,7 +908,9 @@ namespace LastEpochBuildPlanner
             // hltStr
             // 
             this.hltStr.AutoSize = true;
+            this.hltStr.BackColor = System.Drawing.Color.Transparent;
             this.hltStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hltStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.hltStr.Location = new System.Drawing.Point(338, 52);
             this.hltStr.Name = "hltStr";
             this.hltStr.Size = new System.Drawing.Size(69, 19);
@@ -818,7 +920,9 @@ namespace LastEpochBuildPlanner
             // vitStr
             // 
             this.vitStr.AutoSize = true;
+            this.vitStr.BackColor = System.Drawing.Color.Transparent;
             this.vitStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vitStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.vitStr.Location = new System.Drawing.Point(10, 152);
             this.vitStr.Name = "vitStr";
             this.vitStr.Size = new System.Drawing.Size(78, 19);
@@ -828,7 +932,9 @@ namespace LastEpochBuildPlanner
             // attStr
             // 
             this.attStr.AutoSize = true;
+            this.attStr.BackColor = System.Drawing.Color.Transparent;
             this.attStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.attStr.Location = new System.Drawing.Point(10, 127);
             this.attStr.Name = "attStr";
             this.attStr.Size = new System.Drawing.Size(113, 19);
@@ -838,7 +944,9 @@ namespace LastEpochBuildPlanner
             // intStr
             // 
             this.intStr.AutoSize = true;
+            this.intStr.BackColor = System.Drawing.Color.Transparent;
             this.intStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.intStr.Location = new System.Drawing.Point(10, 102);
             this.intStr.Name = "intStr";
             this.intStr.Size = new System.Drawing.Size(117, 19);
@@ -848,7 +956,9 @@ namespace LastEpochBuildPlanner
             // dexStr
             // 
             this.dexStr.AutoSize = true;
+            this.dexStr.BackColor = System.Drawing.Color.Transparent;
             this.dexStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dexStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.dexStr.Location = new System.Drawing.Point(10, 77);
             this.dexStr.Name = "dexStr";
             this.dexStr.Size = new System.Drawing.Size(95, 19);
@@ -858,7 +968,9 @@ namespace LastEpochBuildPlanner
             // strStr
             // 
             this.strStr.AutoSize = true;
+            this.strStr.BackColor = System.Drawing.Color.Transparent;
             this.strStr.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.strStr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.strStr.Location = new System.Drawing.Point(10, 52);
             this.strStr.Name = "strStr";
             this.strStr.Size = new System.Drawing.Size(89, 19);
@@ -868,55 +980,31 @@ namespace LastEpochBuildPlanner
             // selectClass
             // 
             this.selectClass.AutoSize = true;
+            this.selectClass.BackColor = System.Drawing.Color.Transparent;
             this.selectClass.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectClass.Location = new System.Drawing.Point(338, 14);
+            this.selectClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.selectClass.Location = new System.Drawing.Point(338, 15);
             this.selectClass.Name = "selectClass";
             this.selectClass.Size = new System.Drawing.Size(53, 19);
             this.selectClass.TabIndex = 1;
             this.selectClass.Text = "CLASS";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Location = new System.Drawing.Point(557, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(694, 483);
-            this.panel1.TabIndex = 29;
-            // 
-            // skillsBtn
-            // 
-            this.skillsBtn.Enabled = false;
-            this.skillsBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skillsBtn.Location = new System.Drawing.Point(12, 501);
-            this.skillsBtn.Name = "skillsBtn";
-            this.skillsBtn.Size = new System.Drawing.Size(104, 32);
-            this.skillsBtn.TabIndex = 30;
-            this.skillsBtn.Text = "#SKILLS";
-            this.skillsBtn.UseVisualStyleBackColor = true;
-            // 
-            // passivesBtn
-            // 
-            this.passivesBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passivesBtn.Location = new System.Drawing.Point(125, 501);
-            this.passivesBtn.Name = "passivesBtn";
-            this.passivesBtn.Size = new System.Drawing.Size(104, 32);
-            this.passivesBtn.TabIndex = 31;
-            this.passivesBtn.Text = "PASSIVES";
-            this.passivesBtn.UseVisualStyleBackColor = true;
-            this.passivesBtn.Click += new System.EventHandler(this.passivesBtn_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 559);
+            this.BackgroundImage = global::LastEpochBuildPlanner.Properties.Resources._ruined_welryn;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1266, 559);
             this.Controls.Add(this.passivesBtn);
             this.Controls.Add(this.skillsBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelInfo);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Main";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Last Epoch Build Planner";
             this.panelInfo.ResumeLayout(false);

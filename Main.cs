@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -11,9 +12,9 @@ namespace LastEpochBuildPlanner
     public partial class Main : Form
     {
         // declare global variables
-        private string name;
-        private int lvl, str, dex, intel, att, vit, mana, manaReg, movSpeed, dodge, health;
-        private double healthReg, armour, wardRet, healthBLvl, manaBLevel, healthRegBLvl;
+        private string name, selected;
+        private int lvl, str, dex, intel, att, vit, manaReg, movSpeed, dodge, armour, armourBPoint;
+        private double healthReg, wardRet, health, healthRegBPoint, mana;
 
         public Main()
         {
@@ -25,7 +26,8 @@ namespace LastEpochBuildPlanner
         private void LoadClass()
         {
             // selected item is trimed of '-' and ' ' (space)
-            string selected = classList.Text.Trim(new char[] { '-', ' ' });
+            char[] charsToTrim = { '-' };
+            selected = classList.Text.Trim(charsToTrim).ToLower().Replace(" ", "");
 
             // load and
             // store default values based on class
@@ -36,7 +38,7 @@ namespace LastEpochBuildPlanner
                 select cls;
             foreach (XElement cls in Class)
             {
-                name = cls.Element("Name").Value;
+                name = classList.Text.Trim(charsToTrim).ToUpper();
                 lvl = Convert.ToInt32(cls.Element("Level").Value);
                 str = Convert.ToInt32(cls.Element("Strength").Value);
                 dex = Convert.ToInt32(cls.Element("Dexterity").Value);
@@ -60,7 +62,7 @@ namespace LastEpochBuildPlanner
                 manaValue.Text = Convert.ToString(mana);
                 healthRegenValue.Text = Convert.ToString(healthReg);
                 manaRegenValue.Text = Convert.ToString(manaReg);
-                movspeedValue.Text = Convert.ToString(movSpeed);
+                movspeedValue.Text = Convert.ToString(movSpeed + "%");
             }
         }
 
@@ -97,14 +99,14 @@ namespace LastEpochBuildPlanner
                 manaValue.Text = Convert.ToString(mana);
                 healthRegenValue.Text = Convert.ToString(healthReg);
                 manaRegenValue.Text = Convert.ToString(manaReg);
-                movspeedValue.Text = Convert.ToString(movSpeed);
+                movspeedValue.Text = Convert.ToString(movSpeed + "%");
             }
             else
             {
                 passivesBtn.Enabled = true;
 
-                classPicBox.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(name);
-                classStr.Text = name;
+                classPicBox.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(selected);
+                classStr.Text = name.ToUpper();
                 strValue.Text = Convert.ToString(str);
                 dexValue.Text = Convert.ToString(dex);
                 intValue.Text = Convert.ToString(intel);
@@ -114,7 +116,7 @@ namespace LastEpochBuildPlanner
                 manaValue.Text = Convert.ToString(mana);
                 healthRegenValue.Text = Convert.ToString(healthReg);
                 manaRegenValue.Text = Convert.ToString(manaReg);
-                movspeedValue.Text = Convert.ToString(movSpeed);
+                movspeedValue.Text = Convert.ToString(movSpeed + "%");
             }
 
             // update default values based on points
@@ -133,12 +135,13 @@ namespace LastEpochBuildPlanner
             if (str > 0)
             {
                 // strength is one of the Character Stats which increases Armor by 5% per point
-                armour += Math.Floor(str * 0.4f);
+                armourBPoint = str * 5;
+                armour += armour * (armourBPoint / 100);
                 armourValue.Text = Convert.ToString(armour);
             }
             else
             {
-                armourValue.Text = "0";
+                armourValue.Text = Convert.ToString(armour);
             }
 
             if (dex > 0)
@@ -150,25 +153,29 @@ namespace LastEpochBuildPlanner
             }
             else
             {
-                dodgeValue.Text = "0";
+                dodgeValue.Text = Convert.ToString(dodge);
             }
 
             if (intel > 0)
             {
                 // intelligence is one of the Character Stats which increases Ward Retention by 4% per point
-                wardRet += Math.Floor(intel * 0.4f);
-                wardRetValue.Text = Convert.ToString(wardRet);
+                int wardRetBpoint = intel * 4;
+                wardRet += wardRet * (wardRetBpoint / 100);
+                wardRetValue.Text = Convert.ToString(wardRet + "%");
             }
             else
             {
-                wardRetValue.Text = "0";
+                wardRetValue.Text = Convert.ToString(wardRet + "%");
             }
 
             if (vit > 0)
             {
                 // vitality is one of the Character Stats which grants 10 health and 2% increased health regen.
-                health += 10 * Convert.ToInt32(lvlValue.Value);
-                healthReg += Math.Floor(healthReg * 0.2f);
+                health += vit * 10;
+
+                healthRegBPoint = vit * 2;
+                healthReg += Math.Floor(healthReg * (healthRegBPoint / 100));
+
                 healthValue.Text = Convert.ToString(health);
                 healthRegenValue.Text = Convert.ToString(healthReg);
             }
@@ -176,13 +183,33 @@ namespace LastEpochBuildPlanner
             {
                 healthValue.Text = Convert.ToString(health);
                 healthRegenValue.Text = Convert.ToString(healthReg);
+            }
+
+            if (classList.Text == "Druid")
+            {
+                double classBonusH = health * 0.2f;
+                double totalHealth = Math.Floor(health + classBonusH);
+
+                double classBonusM = mana * 0.2f;
+                double totalMana = Math.Floor(mana + classBonusM);
+
+                healthValue.Text = Convert.ToString(totalHealth);
+                manaValue.Text = Convert.ToString(totalMana);
+            }
+            else
+            {
+                manaValue.Text = Convert.ToString(mana);
+                healthValue.Text = Convert.ToString(health);
             }
         }
 
         private void passivesBtn_Click(object sender, EventArgs e)
         {
             // new form, passive points panel
-            Passives passiveForm = new Passives();
+            Passive passiveForm = new Passive
+            {
+                className = classList.Text.Trim(new char[] { '-', ' ' }).ToLower().Replace(" ", "")
+            };
             passiveForm.Show();
         }
 
@@ -195,50 +222,50 @@ namespace LastEpochBuildPlanner
 
         private void lvlValue_ValueChanged(object sender, EventArgs e)
         {
+            lvl = (int)lvlValue.Value;
+            double healthBLvl, druidHBonus, healthBonus, manaBLvl, druidMBonus, manaBonus, healthRegBLvl;
+
             if (classList.SelectedItem == null || string.IsNullOrEmpty(classList.SelectedItem.ToString()))
             {
-                lvlValue.Value = 1;
+                lvl = 1;
             }
 
-            // strength
-
-            // dexterity
-
-            // intelligence
-
-            // attunement
-
-            // vitality
-
             // health
-            if (classList.Text == "Druid")
+            // the character gaining 8 points of Health for each level they have.
+            if (selected == "druid")
             {
-                healthBLvl = (9.6 * (int)lvlValue.Value) - 9.6 + health;
-                healthValue.Text = Convert.ToString(Math.Floor(healthBLvl));
-            } else
+                healthBLvl = (8 * lvl) - 8 + health;
+
+                druidHBonus = healthBLvl * 0.2f;
+                healthBonus = Math.Floor(healthBLvl + druidHBonus);
+
+                healthValue.Text = Convert.ToString(healthBonus);
+            }
+            else
             {
-                healthBLvl = (8 * (int)lvlValue.Value) - 8 + health;
+                healthBLvl = (8 * lvl) - 8 + health;
                 healthValue.Text = Convert.ToString(healthBLvl);
             }
 
             // mana
-            if (classList.Text == "Druid")
+            if (selected == "druid")
             {
-                manaBLevel = (0.6f * (int)lvlValue.Value) - 0.6f + mana;
-                manaValue.Text = Convert.ToString(Math.Floor(manaBLevel));
-            } else
+                manaBLvl = (0.5f * lvl) + mana;
+
+                druidMBonus = manaBLvl * 0.2f;
+                manaBonus = Math.Floor(manaBLvl + druidMBonus);
+
+                manaValue.Text = Convert.ToString(manaBonus);
+            }
+            else
             {
-                manaBLevel = (0.5f * (int)lvlValue.Value) - 0.5f + mana;
-                manaValue.Text = Convert.ToString(Math.Floor(manaBLevel));
+                manaBLvl = Math.Floor((0.5f * lvl) + mana);
+                manaValue.Text = Convert.ToString(manaBLvl);
             }
 
             // health regen
-            healthRegBLvl = (0.14 * (int)lvlValue.Value) + healthReg;
-            healthRegenValue.Text = Convert.ToString(Math.Floor(healthRegBLvl));
-
-            // mana regen
-
-            // mov speed
+            healthRegBLvl = Math.Floor((0.14f * lvl) + healthReg);
+            healthRegenValue.Text = Convert.ToString(healthRegBLvl);
         }
     }
 }

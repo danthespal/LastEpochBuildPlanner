@@ -8,4 +8,4 @@ C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPl
 C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.exe
 C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.pdb
 C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Debug\Data\classes.xml
-C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.Passives.resources
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Debug\LastEpochBuildPlanner.Passive.resources

@@ -73,9 +73,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Acolyte {
+        internal static System.Drawing.Bitmap acolyte {
             get {
-                object obj = ResourceManager.GetObject("Acolyte", resourceCulture);
+                object obj = ResourceManager.GetObject("acolyte", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,29 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Beastmaster {
+        internal static System.Drawing.Bitmap acolyte_passive {
             get {
-                object obj = ResourceManager.GetObject("Beastmaster", resourceCulture);
+                object obj = ResourceManager.GetObject("acolyte_passive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beastmaster {
+            get {
+                object obj = ResourceManager.GetObject("beastmaster", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beastmaster_passive {
+            get {
+                object obj = ResourceManager.GetObject("beastmaster_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +123,19 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bladedancer {
+        internal static System.Drawing.Bitmap bladedancer {
             get {
-                object obj = ResourceManager.GetObject("Bladedancer", resourceCulture);
+                object obj = ResourceManager.GetObject("bladedancer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bladedancer_passive {
+            get {
+                object obj = ResourceManager.GetObject("bladedancer_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +163,29 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Druid {
+        internal static System.Drawing.Bitmap druid {
             get {
-                object obj = ResourceManager.GetObject("Druid", resourceCulture);
+                object obj = ResourceManager.GetObject("druid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_passive {
+            get {
+                object obj = ResourceManager.GetObject("druid_passive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap falconer_passive {
+            get {
+                object obj = ResourceManager.GetObject("falconer_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +203,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Forge_Guard {
+        internal static System.Drawing.Bitmap forgeguard {
             get {
-                object obj = ResourceManager.GetObject("Forge Guard", resourceCulture);
+                object obj = ResourceManager.GetObject("forgeguard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +213,29 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Lich {
+        internal static System.Drawing.Bitmap forgeguard_passive {
             get {
-                object obj = ResourceManager.GetObject("Lich", resourceCulture);
+                object obj = ResourceManager.GetObject("forgeguard_passive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lich {
+            get {
+                object obj = ResourceManager.GetObject("lich", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lich_passive {
+            get {
+                object obj = ResourceManager.GetObject("lich_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +253,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Mage {
+        internal static System.Drawing.Bitmap mage {
             get {
-                object obj = ResourceManager.GetObject("Mage", resourceCulture);
+                object obj = ResourceManager.GetObject("mage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +263,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Marksman {
+        internal static System.Drawing.Bitmap mage_passive {
             get {
-                object obj = ResourceManager.GetObject("Marksman", resourceCulture);
+                object obj = ResourceManager.GetObject("mage_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +273,39 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Necromancer {
+        internal static System.Drawing.Bitmap marksman {
             get {
-                object obj = ResourceManager.GetObject("Necromancer", resourceCulture);
+                object obj = ResourceManager.GetObject("marksman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marksman_passive {
+            get {
+                object obj = ResourceManager.GetObject("marksman_passive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap necromancer {
+            get {
+                object obj = ResourceManager.GetObject("necromancer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap necromancer_passive {
+            get {
+                object obj = ResourceManager.GetObject("necromancer_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +323,19 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Paladin {
+        internal static System.Drawing.Bitmap paladin {
             get {
-                object obj = ResourceManager.GetObject("Paladin", resourceCulture);
+                object obj = ResourceManager.GetObject("paladin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paladin_passive {
+            get {
+                object obj = ResourceManager.GetObject("paladin_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +363,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Primalist {
+        internal static System.Drawing.Bitmap primalist {
             get {
-                object obj = ResourceManager.GetObject("Primalist", resourceCulture);
+                object obj = ResourceManager.GetObject("primalist", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +373,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Rogue {
+        internal static System.Drawing.Bitmap primalist_passive {
             get {
-                object obj = ResourceManager.GetObject("Rogue", resourceCulture);
+                object obj = ResourceManager.GetObject("primalist_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +383,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sentinel {
+        internal static System.Drawing.Bitmap rogue {
             get {
-                object obj = ResourceManager.GetObject("Sentinel", resourceCulture);
+                object obj = ResourceManager.GetObject("rogue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +393,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Shaman {
+        internal static System.Drawing.Bitmap rogue_passive {
             get {
-                object obj = ResourceManager.GetObject("Shaman", resourceCulture);
+                object obj = ResourceManager.GetObject("rogue_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +403,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sorcerer {
+        internal static System.Drawing.Bitmap runemaster_passive {
             get {
-                object obj = ResourceManager.GetObject("Sorcerer", resourceCulture);
+                object obj = ResourceManager.GetObject("runemaster_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +413,9 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Spellblade {
+        internal static System.Drawing.Bitmap sentinel {
             get {
-                object obj = ResourceManager.GetObject("Spellblade", resourceCulture);
+                object obj = ResourceManager.GetObject("sentinel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +423,89 @@ namespace LastEpochBuildPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Void_Knight {
+        internal static System.Drawing.Bitmap sentinel_passive {
             get {
-                object obj = ResourceManager.GetObject("Void Knight", resourceCulture);
+                object obj = ResourceManager.GetObject("sentinel_passive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shaman {
+            get {
+                object obj = ResourceManager.GetObject("shaman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shaman_passive {
+            get {
+                object obj = ResourceManager.GetObject("shaman_passive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sorcerer {
+            get {
+                object obj = ResourceManager.GetObject("sorcerer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sorcerer_passive {
+            get {
+                object obj = ResourceManager.GetObject("sorcerer_passive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spellblade {
+            get {
+                object obj = ResourceManager.GetObject("spellblade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spellblade_passive {
+            get {
+                object obj = ResourceManager.GetObject("spellblade_passive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap voidknight {
+            get {
+                object obj = ResourceManager.GetObject("voidknight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap voidknight_passive {
+            get {
+                object obj = ResourceManager.GetObject("voidknight_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +516,16 @@ namespace LastEpochBuildPlanner.Properties {
         internal static System.Drawing.Bitmap voidRes {
             get {
                 object obj = ResourceManager.GetObject("voidRes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warlock_passive {
+            get {
+                object obj = ResourceManager.GetObject("warlock_passive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

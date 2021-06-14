@@ -9,3 +9,30 @@ C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuild
 C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.csproj.CoreCompileInputs.cache
 C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.exe
 C:\Users\dannybest\source\repos\LastEpochBuildPlanner\obj\Release\LastEpochBuildPlanner.pdb
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\acolyte.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\beastmaster.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\bg_gray_textured.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\bladedancer.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\coldRes.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\default_class.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\druid.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\fireRes.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\forge guard.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\lich.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\lightRes.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\mage.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\marksman.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\necromancer.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\necroRes.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\paladin.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\physicalRes.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\poisonRes.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\primalist.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\rogue.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\sentinel.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\shaman.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\sorcerer.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\spellblade.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\void knight.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\voidRes.png
+C:\Users\dannybest\source\repos\LastEpochBuildPlanner\bin\Release\Resources\_ruined_welryn.png

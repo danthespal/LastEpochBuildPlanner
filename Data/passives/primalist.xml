@@ -1,0 +1,104 @@
+﻿<!-- gameversion: 0.8.2g-->
+<primalist>
+  <skill id="1">
+    <!-- health: 10+ per point -->
+    <!-- increased minion health: 5% per point -->
+    <name>Gift of the Wilderness</name>
+    <maxPoints>6</maxPoints>
+  </skill>
+  <skill id="2">
+    <!-- attunement: 1+ per point -->
+    <!-- lighting resistance: 3% per point -->
+    <!-- cold resistance: 3% per point -->
+    <name>Natural Attunement</name>
+    <maxPoints>8</maxPoints>
+  </skill>
+  <skill id="3">
+    <!-- strength: 1+ per point -->
+    <!-- increased health regeneration: 4% per point -->
+    <name>Primal Strength</name>
+    <maxPoints>8</maxPoints>
+  </skill>
+  <skill id="4">
+    <!-- increased minion damage: 5% per point -->
+    <!-- percent of potion healing received by minions: 50% per point -->
+    <name>Primal Medicine</name>
+    <maxPoinsts>6</maxPoinsts>
+  </skill>
+  <skill id="5">
+    <!-- can equip axes in offhand -->
+    <!-- can equip sowrd in offhand -->
+    <!-- damage taken while dual wielding: 15% -->
+    <name>Harmony of Blades</name>
+    <maxPoints>1</maxPoints>
+  </skill>
+  <skill id="6">
+    <!-- increased health: 2% per point -->
+    <!-- health restored: 8 per point -->
+    <name>Hunter's Restoration</name>
+    <maxPoints>5</maxPoints>
+  </skill>
+  <skill id="7">
+    <!-- increased spell damage: 7% per point -->
+    <!-- increased minion spell damage: 7% per point -->
+    <name>Wisdom of the Wild</name>
+    <maxPoints>6</maxPoints>
+  </skill>
+  <skill id="8">
+    <!-- increased melee damage: 5% per point -->
+    <!-- melee damage leeched as health: 0.5% per point -->
+    <!-- minion increased melee damage: 5% per point -->
+    <!-- minion melee damage leeched as health: 0.5% per point -->
+    <name>Survival of the Pack</name>
+    <maxPoints>6</maxPoints>
+  </skill>
+  <skill id="9">
+    <!-- health: 10+ per point -->
+    <!-- increased companion health: 10% per point -->
+    <!-- companion revival speed: 5% per point -->
+    <name>Ancient Call</name>
+    <maxPoints>6</maxPoints>
+  </skill>
+  <skill id="10">
+    <!-- increased physical damage: 4% per point -->
+    <!-- increased cold damage: 4% per point -->
+    <!-- increased lightning damage: 4% per point -->
+    <!-- double damage while you have a minion -->
+    <name>Tempest Bond</name>
+    <maxPoints>8</maxPoints>
+  </skill>
+  <skill id="11">
+    <!-- increased minion damage granted: 11% per point -->
+    <!-- does not scale with points allocated -->
+    <!-- hunter's restoration also heals minions -->
+    <name>Hunter's Emanation</name>
+    <maxPoints>5</maxPoints>
+  </skill>
+  <skill id="12">
+    <!-- adaptive spell damage: 1+ per point -->
+    <!-- totem adaptive spell damage: 1+ per point -->
+    <!-- tripled while using an axe -->
+    <name>Elder Branch</name>
+    <maxPoints>5</maxPoints>
+  </skill>
+  <skill id="13">
+    <!-- more melee damage on low health: 20% per point -->
+    <!-- less damage taken on low health: 6% per point -->
+    <name>Berserker</name>
+    <maxPoints>5</maxPoints>
+  </skill>
+  <skill id="14">
+    <!-- increased totem health: 20% per point -->
+    <!-- does not scale with points allocated -->
+    <!-- totems are immune to poison -->
+    <name>Rotbane</name>
+    <maxPoints>5</maxPoints>
+  </skill>
+  <skill id="15">
+    <!-- melee cold damage with a two handed mace: 5+ per point -->
+    <!-- melee physical damage with a two handed axe : 4+ per point -->
+    <!-- melee lightning damage with a staff: 3+ per point -->
+    <name>Ancestral Weaponry</name>
+    <maxPoints>10</maxPoints>
+  </skill>
+</primalist>

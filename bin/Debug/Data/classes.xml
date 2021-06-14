@@ -1,6 +1,7 @@
-﻿<Classes>
+﻿<!-- gameversion: 0.8.2g-->
+<classes>
   <class id="1">
-    <Name>Primalist</Name>
+    <Name>primalist</Name>
     <Level>1</Level>
     <Strength>2</Strength>
     <Dexterity>0</Dexterity>
@@ -8,13 +9,13 @@
     <Attunement>1</Attunement>
     <Vitality>0</Vitality>
     <Health>100</Health>
-    <Mana>52</Mana>
+    <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="2">
-    <Name>Beastmaster</Name>
+    <Name>beastmaster</Name>
     <Level>1</Level>
     <Strength>2</Strength>
     <Dexterity>0</Dexterity>
@@ -22,13 +23,27 @@
     <Attunement>1</Attunement>
     <Vitality>0</Vitality>
     <Health>100</Health>
-    <Mana>52</Mana>
+    <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="3">
-    <Name>Shaman</Name>
+    <Name>shaman</Name>
+    <Level>1</Level>
+    <Strength>2</Strength>
+    <Dexterity>0</Dexterity>
+    <Intelligence>0</Intelligence>
+    <Attunement>11</Attunement>
+    <Vitality>0</Vitality>
+    <Health>100</Health>
+    <Mana>50</Mana>
+    <HealthReg>6</HealthReg>
+    <ManaReg>8</ManaReg>
+    <MovSpd>0</MovSpd>
+  </class>
+  <class id="4">
+    <Name>druid</Name>
     <Level>1</Level>
     <Strength>2</Strength>
     <Dexterity>0</Dexterity>
@@ -36,27 +51,13 @@
     <Attunement>1</Attunement>
     <Vitality>0</Vitality>
     <Health>100</Health>
-    <Mana>72</Mana>
-    <HealthReg>6</HealthReg>
-    <ManaReg>8</ManaReg>
-    <MovSpd>0</MovSpd>
-  </class>
-  <class id="4">
-    <Name>Druid</Name>
-    <Level>1</Level>
-    <Strength>2</Strength>
-    <Dexterity>0</Dexterity>
-    <Intelligence>0</Intelligence>
-    <Attunement>1</Attunement>
-    <Vitality>0</Vitality>
-    <Health>120</Health>
-    <Mana>62</Mana>
+    <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="5">
-    <Name>Mage</Name>
+    <Name>mage</Name>
     <Level>1</Level>
     <Strength>0</Strength>
     <Dexterity>0</Dexterity>
@@ -70,7 +71,7 @@
     <MovSpd>0</MovSpd>
   </class>
   <class id="6">
-    <Name>Sorcerer</Name>
+    <Name>sorcerer</Name>
     <Level>1</Level>
     <Strength>0</Strength>
     <Dexterity>0</Dexterity>
@@ -78,13 +79,13 @@
     <Attunement>0</Attunement>
     <Vitality>0</Vitality>
     <Health>100</Health>
-    <Mana>100</Mana>
+    <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="7">
-    <Name>Spellblade</Name>
+    <Name>spellblade</Name>
     <Level>1</Level>
     <Strength>0</Strength>
     <Dexterity>0</Dexterity>
@@ -98,105 +99,105 @@
     <MovSpd>0</MovSpd>
   </class>
   <class id="8">
-    <Name>Sentinel</Name>
+    <Name>sentinel</Name>
     <Level>1</Level>
     <Strength>2</Strength>
     <Dexterity>0</Dexterity>
     <Intelligence>0</Intelligence>
     <Attunement>0</Attunement>
     <Vitality>1</Vitality>
-    <Health>110</Health>
+    <Health>100</Health>
     <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="9">
-    <Name>Void Knight</Name>
+    <Name>voidknight</Name>
     <Level>1</Level>
     <Strength>2</Strength>
     <Dexterity>0</Dexterity>
     <Intelligence>0</Intelligence>
     <Attunement>0</Attunement>
     <Vitality>1</Vitality>
-    <Health>110</Health>
+    <Health>100</Health>
     <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="10">
-    <Name>Forge Guard</Name>
+    <Name>forgeguard</Name>
     <Level>1</Level>
     <Strength>2</Strength>
     <Dexterity>0</Dexterity>
     <Intelligence>0</Intelligence>
     <Attunement>0</Attunement>
     <Vitality>1</Vitality>
-    <Health>110</Health>
+    <Health>100</Health>
     <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="11">
-    <Name>Paladin</Name>
+    <Name>paladin</Name>
     <Level>1</Level>
     <Strength>2</Strength>
     <Dexterity>0</Dexterity>
     <Intelligence>0</Intelligence>
     <Attunement>0</Attunement>
     <Vitality>1</Vitality>
-    <Health>110</Health>
+    <Health>100</Health>
     <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="12">
-    <Name>Acolyte</Name>
+    <Name>acolyte</Name>
     <Level>1</Level>
     <Strength>0</Strength>
     <Dexterity>0</Dexterity>
     <Intelligence>2</Intelligence>
     <Attunement>0</Attunement>
     <Vitality>1</Vitality>
-    <Health>110</Health>
+    <Health>100</Health>
     <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="13">
-    <Name>Necromancer</Name>
+    <Name>necromancer</Name>
     <Level>1</Level>
     <Strength>0</Strength>
     <Dexterity>0</Dexterity>
     <Intelligence>2</Intelligence>
     <Attunement>0</Attunement>
     <Vitality>1</Vitality>
-    <Health>110</Health>
+    <Health>100</Health>
     <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="14">
-    <Name>Lich</Name>
+    <Name>lich</Name>
     <Level>1</Level>
     <Strength>0</Strength>
     <Dexterity>0</Dexterity>
     <Intelligence>2</Intelligence>
     <Attunement>0</Attunement>
     <Vitality>1</Vitality>
-    <Health>110</Health>
+    <Health>100</Health>
     <Mana>50</Mana>
     <HealthReg>6</HealthReg>
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
   <class id="15">
-    <Name>Rogue</Name>
+    <Name>rogue</Name>
     <Level>1</Level>
     <Strength>0</Strength>
     <Dexterity>3</Dexterity>
@@ -210,7 +211,7 @@
     <MovSpd>0</MovSpd>
   </class>
   <class id="16">
-    <Name>Bladedancer</Name>
+    <Name>bladedancer</Name>
     <Level>1</Level>
     <Strength>0</Strength>
     <Dexterity>3</Dexterity>
@@ -224,7 +225,7 @@
     <MovSpd>0</MovSpd>
   </class>
   <class id="17">
-    <Name>Marksman</Name>
+    <Name>marksman</Name>
     <Level>1</Level>
     <Strength>0</Strength>
     <Dexterity>3</Dexterity>
@@ -237,4 +238,4 @@
     <ManaReg>8</ManaReg>
     <MovSpd>0</MovSpd>
   </class>
-</Classes>
+</classes>

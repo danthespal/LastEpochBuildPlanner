@@ -48,13 +48,13 @@ namespace LastEpochBuildPlanner
             this.blockChanceStr = new System.Windows.Forms.Label();
             this.addDefStr = new System.Windows.Forms.Label();
             this.separation2 = new System.Windows.Forms.Label();
-            this.voidValue = new System.Windows.Forms.Label();
-            this.necroValue = new System.Windows.Forms.Label();
-            this.poisonValue = new System.Windows.Forms.Label();
-            this.phyValue = new System.Windows.Forms.Label();
-            this.coldValue = new System.Windows.Forms.Label();
-            this.lightValue = new System.Windows.Forms.Label();
-            this.fireValue = new System.Windows.Forms.Label();
+            this.voidRes = new System.Windows.Forms.Label();
+            this.necroRes = new System.Windows.Forms.Label();
+            this.poisonRes = new System.Windows.Forms.Label();
+            this.physRes = new System.Windows.Forms.Label();
+            this.coldRes = new System.Windows.Forms.Label();
+            this.lightRes = new System.Windows.Forms.Label();
+            this.fireRes = new System.Windows.Forms.Label();
             this.fireStr = new System.Windows.Forms.Label();
             this.lightStr = new System.Windows.Forms.Label();
             this.coldStr = new System.Windows.Forms.Label();
@@ -158,13 +158,13 @@ namespace LastEpochBuildPlanner
             this.panelInfo.Controls.Add(this.blockChanceStr);
             this.panelInfo.Controls.Add(this.addDefStr);
             this.panelInfo.Controls.Add(this.separation2);
-            this.panelInfo.Controls.Add(this.voidValue);
-            this.panelInfo.Controls.Add(this.necroValue);
-            this.panelInfo.Controls.Add(this.poisonValue);
-            this.panelInfo.Controls.Add(this.phyValue);
-            this.panelInfo.Controls.Add(this.coldValue);
-            this.panelInfo.Controls.Add(this.lightValue);
-            this.panelInfo.Controls.Add(this.fireValue);
+            this.panelInfo.Controls.Add(this.voidRes);
+            this.panelInfo.Controls.Add(this.necroRes);
+            this.panelInfo.Controls.Add(this.poisonRes);
+            this.panelInfo.Controls.Add(this.physRes);
+            this.panelInfo.Controls.Add(this.coldRes);
+            this.panelInfo.Controls.Add(this.lightRes);
+            this.panelInfo.Controls.Add(this.fireRes);
             this.panelInfo.Controls.Add(this.fireStr);
             this.panelInfo.Controls.Add(this.lightStr);
             this.panelInfo.Controls.Add(this.coldStr);
@@ -383,82 +383,89 @@ namespace LastEpochBuildPlanner
             this.separation2.TabIndex = 57;
             this.separation2.Text = "0";
             // 
-            // voidValue
+            // voidRes
             // 
-            this.voidValue.BackColor = System.Drawing.Color.Transparent;
-            this.voidValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voidValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.voidValue.Location = new System.Drawing.Point(460, 321);
-            this.voidValue.Name = "voidValue";
-            this.voidValue.Size = new System.Drawing.Size(30, 15);
-            this.voidValue.TabIndex = 56;
-            this.voidValue.Text = "0%";
+            this.voidRes.BackColor = System.Drawing.Color.Transparent;
+            this.voidRes.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voidRes.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.voidRes.Location = new System.Drawing.Point(455, 321);
+            this.voidRes.Name = "voidRes";
+            this.voidRes.Size = new System.Drawing.Size(40, 15);
+            this.voidRes.TabIndex = 56;
+            this.voidRes.Text = "0%";
+            this.voidRes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // necroValue
+            // necroRes
             // 
-            this.necroValue.BackColor = System.Drawing.Color.Transparent;
-            this.necroValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.necroValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.necroValue.Location = new System.Drawing.Point(390, 321);
-            this.necroValue.Name = "necroValue";
-            this.necroValue.Size = new System.Drawing.Size(30, 15);
-            this.necroValue.TabIndex = 55;
-            this.necroValue.Text = "0%";
+            this.necroRes.BackColor = System.Drawing.Color.Transparent;
+            this.necroRes.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.necroRes.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.necroRes.Location = new System.Drawing.Point(385, 321);
+            this.necroRes.Name = "necroRes";
+            this.necroRes.Size = new System.Drawing.Size(40, 15);
+            this.necroRes.TabIndex = 55;
+            this.necroRes.Text = "0%";
+            this.necroRes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // poisonValue
+            // poisonRes
             // 
-            this.poisonValue.BackColor = System.Drawing.Color.Transparent;
-            this.poisonValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.poisonValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.poisonValue.Location = new System.Drawing.Point(320, 321);
-            this.poisonValue.Name = "poisonValue";
-            this.poisonValue.Size = new System.Drawing.Size(30, 15);
-            this.poisonValue.TabIndex = 54;
-            this.poisonValue.Text = "0%";
+            this.poisonRes.BackColor = System.Drawing.Color.Transparent;
+            this.poisonRes.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.poisonRes.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.poisonRes.Location = new System.Drawing.Point(315, 321);
+            this.poisonRes.Name = "poisonRes";
+            this.poisonRes.Size = new System.Drawing.Size(40, 15);
+            this.poisonRes.TabIndex = 54;
+            this.poisonRes.Text = "0%";
+            this.poisonRes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // phyValue
+            // physRes
             // 
-            this.phyValue.BackColor = System.Drawing.Color.Transparent;
-            this.phyValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phyValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.phyValue.Location = new System.Drawing.Point(250, 321);
-            this.phyValue.Name = "phyValue";
-            this.phyValue.Size = new System.Drawing.Size(30, 15);
-            this.phyValue.TabIndex = 53;
-            this.phyValue.Text = "0%";
+            this.physRes.BackColor = System.Drawing.Color.Transparent;
+            this.physRes.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.physRes.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.physRes.Location = new System.Drawing.Point(245, 321);
+            this.physRes.Name = "physRes";
+            this.physRes.Size = new System.Drawing.Size(40, 15);
+            this.physRes.TabIndex = 53;
+            this.physRes.Text = "0%";
+            this.physRes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // coldValue
+            // coldRes
             // 
-            this.coldValue.BackColor = System.Drawing.Color.Transparent;
-            this.coldValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coldValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.coldValue.Location = new System.Drawing.Point(180, 321);
-            this.coldValue.Name = "coldValue";
-            this.coldValue.Size = new System.Drawing.Size(30, 15);
-            this.coldValue.TabIndex = 52;
-            this.coldValue.Text = "0%";
+            this.coldRes.BackColor = System.Drawing.Color.Transparent;
+            this.coldRes.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coldRes.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.coldRes.Location = new System.Drawing.Point(175, 321);
+            this.coldRes.Name = "coldRes";
+            this.coldRes.Size = new System.Drawing.Size(40, 15);
+            this.coldRes.TabIndex = 52;
+            this.coldRes.Text = "0%";
+            this.coldRes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lightValue
+            // lightRes
             // 
-            this.lightValue.BackColor = System.Drawing.Color.Transparent;
-            this.lightValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lightValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lightValue.Location = new System.Drawing.Point(110, 321);
-            this.lightValue.Name = "lightValue";
-            this.lightValue.Size = new System.Drawing.Size(30, 15);
-            this.lightValue.TabIndex = 51;
-            this.lightValue.Text = "0%";
+            this.lightRes.BackColor = System.Drawing.Color.Transparent;
+            this.lightRes.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lightRes.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lightRes.Location = new System.Drawing.Point(105, 321);
+            this.lightRes.Name = "lightRes";
+            this.lightRes.Size = new System.Drawing.Size(40, 15);
+            this.lightRes.TabIndex = 51;
+            this.lightRes.Text = "0%";
+            this.lightRes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // fireValue
+            // fireRes
             // 
-            this.fireValue.BackColor = System.Drawing.Color.Transparent;
-            this.fireValue.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fireValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.fireValue.Location = new System.Drawing.Point(40, 321);
-            this.fireValue.Name = "fireValue";
-            this.fireValue.Size = new System.Drawing.Size(30, 15);
-            this.fireValue.TabIndex = 50;
-            this.fireValue.Text = "0%";
+            this.fireRes.BackColor = System.Drawing.Color.Transparent;
+            this.fireRes.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fireRes.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.fireRes.Location = new System.Drawing.Point(35, 321);
+            this.fireRes.Name = "fireRes";
+            this.fireRes.Size = new System.Drawing.Size(40, 15);
+            this.fireRes.TabIndex = 50;
+            this.fireRes.Text = "0%";
+            this.fireRes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fireStr
             // 
@@ -1066,13 +1073,13 @@ namespace LastEpochBuildPlanner
         public System.Windows.Forms.Label phyStr;
         public System.Windows.Forms.PictureBox voidResBox;
         public System.Windows.Forms.PictureBox necroResBox;
-        public System.Windows.Forms.Label voidValue;
-        public System.Windows.Forms.Label necroValue;
-        public System.Windows.Forms.Label poisonValue;
-        public System.Windows.Forms.Label phyValue;
-        public System.Windows.Forms.Label coldValue;
-        public System.Windows.Forms.Label lightValue;
-        public System.Windows.Forms.Label fireValue;
+        public System.Windows.Forms.Label voidRes;
+        public System.Windows.Forms.Label necroRes;
+        public System.Windows.Forms.Label poisonRes;
+        public System.Windows.Forms.Label physRes;
+        public System.Windows.Forms.Label coldRes;
+        public System.Windows.Forms.Label lightRes;
+        public System.Windows.Forms.Label fireRes;
         public System.Windows.Forms.Label addDefStr;
         public System.Windows.Forms.Label separation2;
         public System.Windows.Forms.Label stunAvoidStr;

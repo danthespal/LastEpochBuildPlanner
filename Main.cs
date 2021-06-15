@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -12,8 +10,8 @@ namespace LastEpochBuildPlanner
     {
         // declare global variables
         private string name, selected;
-        private int lvl, str, dex, intel, att, vit, manaReg, movSpeed, dodge, armour;
-        private double baseHealthReg, wardRet, baseHealth, baseMana, fireValue, lightValue, coldValue, physValue, poisonValue, necroValue, voidValue;
+        private int lvl, str, dex, intel, att, vit, manaReg, movSpeed, baseDodge, baseArmour;
+        private double baseHealthReg, baseWardRet, baseHealth, baseMana, baseFireRes, baseLightRes, baseColdRes, basePhysRes, basePoisonRes, baseNecroRes, baseVoidRes;
 
         public Main()
         {
@@ -42,6 +40,7 @@ namespace LastEpochBuildPlanner
             // store default values based on class
             foreach (XElement cls in enumerable())
             {
+                // base
                 name = classList.Text.Trim(new char[] { '-' }).ToUpper();
                 lvl = Convert.ToInt32(cls.Element("level").Value);
                 str = Convert.ToInt32(cls.Element("strength").Value);
@@ -54,6 +53,18 @@ namespace LastEpochBuildPlanner
                 baseHealthReg = Convert.ToInt32(cls.Element("healthreg").Value);
                 manaReg = Convert.ToInt32(cls.Element("manareg").Value);
                 movSpeed = Convert.ToInt32(cls.Element("movspd").Value);
+                // res
+                baseFireRes = 0;
+                baseLightRes = 0;
+                baseColdRes = 0;
+                basePhysRes = 0;
+                basePoisonRes = 0;
+                baseNecroRes = 0;
+                baseVoidRes = 0;
+                // additional defenses
+                baseArmour = 0;
+                baseDodge = 0;
+                baseWardRet = 0;
             }
         }
 
@@ -65,6 +76,7 @@ namespace LastEpochBuildPlanner
             {
                 passivesBtn.Enabled = false;
 
+                // base
                 name = "";
                 lvl = 1;
                 str = 0;
@@ -77,7 +89,20 @@ namespace LastEpochBuildPlanner
                 baseHealthReg = 0;
                 manaReg = 0;
                 movSpeed = 0;
+                // res
+                baseFireRes = 0;
+                baseLightRes = 0;
+                baseColdRes = 0;
+                basePhysRes = 0;
+                basePoisonRes = 0;
+                baseNecroRes = 0;
+                baseVoidRes = 0;
+                // additional defenses
+                baseArmour = 0;
+                baseDodge = 0;
+                baseWardRet = 0;
 
+                // base
                 classPicBox.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("default_class");
                 classStr.Text = name;
                 lvlValue.Value = lvl;
@@ -90,14 +115,28 @@ namespace LastEpochBuildPlanner
                 manaValue.Text = Convert.ToString(baseMana);
                 healthRegenValue.Text = Convert.ToString(baseHealthReg);
                 manaRegenValue.Text = Convert.ToString(manaReg);
-                movspeedValue.Text = Convert.ToString(movSpeed + "%");
+                movspeedValue.Text = Convert.ToString($"{movSpeed}%");
+                // res
+                fireRes.Text = Convert.ToString($"{baseFireRes}%");
+                lightRes.Text = Convert.ToString($"{baseLightRes}%");
+                coldRes.Text = Convert.ToString($"{baseColdRes}%");
+                physRes.Text = Convert.ToString($"{basePhysRes}%");
+                poisonRes.Text = Convert.ToString($"{basePoisonRes}%");
+                necroRes.Text = Convert.ToString($"{baseNecroRes}%");
+                voidRes.Text = Convert.ToString($"{baseVoidRes}%");
+                // additional defenses
+                armourValue.Text = Convert.ToString($"{baseArmour}%");
+                dodgeValue.Text = Convert.ToString($"{baseDodge}%");
+                wardRetValue.Text = Convert.ToString($"{baseWardRet}%");
             }
             else
             {
                 passivesBtn.Enabled = true;
 
+                // base
                 classPicBox.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject(selected);
                 classStr.Text = name.ToUpper();
+                lvlValue.Value = lvl;
                 strValue.Text = Convert.ToString(str);
                 dexValue.Text = Convert.ToString(dex);
                 intValue.Text = Convert.ToString(intel);
@@ -107,7 +146,19 @@ namespace LastEpochBuildPlanner
                 manaValue.Text = Convert.ToString(baseMana);
                 healthRegenValue.Text = Convert.ToString(baseHealthReg);
                 manaRegenValue.Text = Convert.ToString(manaReg);
-                movspeedValue.Text = Convert.ToString(movSpeed + "%");
+                movspeedValue.Text = Convert.ToString($"{movSpeed}%");
+                // res
+                fireRes.Text = Convert.ToString($"{baseFireRes}%%");
+                lightRes.Text = Convert.ToString($"{baseLightRes}%");
+                coldRes.Text = Convert.ToString($"{baseColdRes}%");
+                physRes.Text = Convert.ToString($"{basePhysRes}%");
+                poisonRes.Text = Convert.ToString($"{basePoisonRes}%");
+                necroRes.Text = Convert.ToString($"{baseNecroRes}%");
+                voidRes.Text = Convert.ToString($"{baseVoidRes}%");
+                // additional defenses
+                armourValue.Text = Convert.ToString($"{baseArmour}%");
+                dodgeValue.Text = Convert.ToString($"{baseDodge}%");
+                wardRetValue.Text = Convert.ToString($"{baseWardRet}%");
             }
 
             // update status based on class mastery bonus
@@ -176,11 +227,16 @@ namespace LastEpochBuildPlanner
             // 3% increased armor for each hit you have taken in the last 10 seconds
             if (selected == "forgeguard")
             {
-                physValue = 35;
-                fireValue = 35;
+                basePhysRes = 35;
+                baseFireRes = 35;
 
-                physRes.Text = $"{Convert.ToString(physValue)}%";
-                fireRes.Text = $"{Convert.ToString(fireValue)}%";
+                physRes.Text = $"{Convert.ToString(basePhysRes)}%";
+                fireRes.Text = $"{Convert.ToString(baseFireRes)}%";
+            }
+            else
+            {
+                physRes.Text = $"{Convert.ToString(basePhysRes)}%";
+                fireRes.Text = $"{Convert.ToString(baseFireRes)}%";
             }
 
             // paladin
@@ -222,35 +278,35 @@ namespace LastEpochBuildPlanner
             if (str > 0)
             {
                 // strength is one of the Character Stats which increases Armor by 5% per point
-                armour += armour * (str * 5 / 100);
-                armourValue.Text = Convert.ToString(armour);
+                baseArmour += baseArmour * (str * 5 / 100);
+                armourValue.Text = Convert.ToString(baseArmour);
             }
             else
             {
-                armourValue.Text = Convert.ToString(armour);
+                armourValue.Text = Convert.ToString(baseArmour);
             }
 
             if (dex > 0)
             {
                 // each point of Dexterity that a character has grants
                 // an additional 4 points to the maximum Dodge Rating
-                dodge += dex * 4;
-                dodgeValue.Text = Convert.ToString(dodge);
+                baseDodge = dex * 4;
+                dodgeValue.Text = Convert.ToString(baseDodge);
             }
             else
             {
-                dodgeValue.Text = Convert.ToString(dodge);
+                dodgeValue.Text = Convert.ToString(baseDodge);
             }
 
             if (intel > 0)
             {
                 // intelligence is one of the Character Stats which increases Ward Retention by 4% per point
-                wardRet += intel * 4;
-                wardRetValue.Text = Convert.ToString($"{wardRet}%");
+                baseWardRet = intel * 4;
+                wardRetValue.Text = Convert.ToString($"{baseWardRet}%");
             }
             else
             {
-                wardRetValue.Text = Convert.ToString($"{wardRet}%");
+                wardRetValue.Text = Convert.ToString($"{baseWardRet}%");
             }
 
             if (vit > 0)
@@ -285,6 +341,7 @@ namespace LastEpochBuildPlanner
         {
             LoadClass();
             UpdateClass();
+            lvlValue_ValueChanged(null, null);
         }
 
         private void lvlValue_ValueChanged(object sender, EventArgs e)

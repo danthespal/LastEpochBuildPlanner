@@ -16,7 +16,7 @@
   </class>
   <class id="2">
     <name>beastmaster</name>
-    <level>1</level>
+    <level>19</level>
     <strength>2</strength>
     <dexterity>0</dexterity>
     <intelligence>0</intelligence>
@@ -30,7 +30,7 @@
   </class>
   <class id="3">
     <name>shaman</name>
-    <level>1</level>
+    <level>19</level>
     <strength>2</strength>
     <dexterity>0</dexterity>
     <intelligence>0</intelligence>
@@ -44,7 +44,7 @@
   </class>
   <class id="4">
     <name>druid</name>
-    <level>1</level>
+    <level>19</level>
     <strength>2</strength>
     <dexterity>0</dexterity>
     <intelligence>0</intelligence>
@@ -72,7 +72,7 @@
   </class>
   <class id="6">
     <name>sorcerer</name>
-    <level>1</level>
+    <level>19</level>
     <strength>0</strength>
     <dexterity>0</dexterity>
     <intelligence>3</intelligence>
@@ -86,7 +86,7 @@
   </class>
   <class id="7">
     <name>spellblade</name>
-    <level>1</level>
+    <level>19</level>
     <strength>0</strength>
     <dexterity>0</dexterity>
     <intelligence>3</intelligence>
@@ -114,7 +114,7 @@
   </class>
   <class id="9">
     <name>voidknight</name>
-    <level>1</level>
+    <level>19</level>
     <strength>2</strength>
     <dexterity>0</dexterity>
     <intelligence>0</intelligence>
@@ -128,7 +128,7 @@
   </class>
   <class id="10">
     <name>forgeguard</name>
-    <level>1</level>
+    <level>19</level>
     <strength>2</strength>
     <dexterity>0</dexterity>
     <intelligence>0</intelligence>
@@ -142,7 +142,7 @@
   </class>
   <class id="11">
     <name>paladin</name>
-    <level>1</level>
+    <level>19</level>
     <strength>2</strength>
     <dexterity>0</dexterity>
     <intelligence>0</intelligence>
@@ -170,7 +170,7 @@
   </class>
   <class id="13">
     <name>necromancer</name>
-    <level>1</level>
+    <level>19</level>
     <strength>0</strength>
     <dexterity>0</dexterity>
     <intelligence>2</intelligence>
@@ -184,7 +184,7 @@
   </class>
   <class id="14">
     <name>lich</name>
-    <level>1</level>
+    <level>19</level>
     <strength>0</strength>
     <dexterity>0</dexterity>
     <intelligence>2</intelligence>
@@ -212,7 +212,7 @@
   </class>
   <class id="16">
     <name>bladedancer</name>
-    <level>1</level>
+    <level>19</level>
     <strength>0</strength>
     <dexterity>3</dexterity>
     <intelligence>0</intelligence>
@@ -226,7 +226,7 @@
   </class>
   <class id="17">
     <name>marksman</name>
-    <level>1</level>
+    <level>19</level>
     <strength>0</strength>
     <dexterity>3</dexterity>
     <intelligence>0</intelligence>
